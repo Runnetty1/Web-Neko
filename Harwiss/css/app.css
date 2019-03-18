@@ -1,0 +1,235 @@
+#topBar{
+	position: -webkit-sticky;
+	position: sticky;
+	width:100%;
+	height:40px;
+	top: 0;
+	background:#151719;
+}
+
+#topbar .toggle-btn{
+	position:absolute;
+	left:10px;
+	height:40px;
+	padding:5px;
+}
+#topbar .toggle-btn span{
+	display:block;
+	width:25px;
+	height:5px;
+	background:#e69138ff;
+	margin:3px 0px;
+
+}
+
+#topbar .login-btn{
+	position:absolute;
+	right:10px;
+	height:40px;
+	padding:5px;
+	display:inline-block;
+}
+#topbar .login-btn .obj{
+	display: inline-block;
+	height:30px;
+}
+
+#topbar .obj p{
+	color:#e69138ff;
+	float:left;
+	margin-right:10px;
+	
+	vertical-align: middle;
+	line-height: 30px; 
+}
+
+#topbar .userico{
+	width:30px;
+	height:30px;
+	margin:0px;
+}
+
+#topbar .account-panel-btn{
+	width:8px;
+	height:8px;
+	margin:0px;
+	margin-bottom:3px;
+	margin-top:11px;
+	float:none;
+}
+
+#topbar .adminico{
+	width:16px;
+	height:16px;
+	margin-bottom:3px;
+	margin-right:5px;
+	float:none;
+}
+#account-panel.active{
+	top:40px;
+	z-index: 1;
+	opacity: 1;
+	visibility: visible; /* hides sub-menu */
+	
+}
+
+#account-panel{
+	visibility: hidden; /* hides sub-menu */
+	z-index: -1;
+	opacity: 0;
+	//position:absolute;
+	right:10px;
+	display:inline-block;
+	top:0px;
+	width:120px;
+	position:fixed;
+	background:#151719;
+	border-right: 10px solid #e69138ff;
+	transition:all 300ms ease-in-out;
+}
+#account-panel ul li{
+	color:rgba(230,230,230,0.9);
+	list-style:none;
+	//padding:5px 0px;
+	//border-bottom: 1px solid rgba(100,100,100,0.3);
+	background-image: linear-gradient(to right, #151719 , rgba(100,100,100,0.2));
+
+	
+}
+#account-panel ul{
+}
+
+#account-panel ul li:hover{
+	//border-bottom: 1px solid rgba(100,100,100,0.3);
+	background-image: linear-gradient(to right, #151719 , #e69138ff);
+}
+
+#sidebar{
+	position:fixed;
+	width:300px;
+	height:100%;
+	background:#151719;
+	left:-300px;
+	transition:all 500ms linear;
+	border-right: 10px solid #e69138ff;
+	transition:all 300ms linear;
+}
+#sidebar.active{
+	left:0px;
+}
+#sidebar ul li{
+	color:rgba(230,230,230,0.9);
+	list-style:none;
+	padding:15px 10px;
+	//border-bottom: 1px solid rgba(100,100,100,0.3);
+	background-image: linear-gradient(to right, #151719 , rgba(100,100,100,0.2));
+
+	transition:all 300ms ease-in-out;
+}
+#sidebar ul{
+
+}
+#sidebar ul li:hover{
+	//border-bottom: 1px solid rgba(100,100,100,0.3);
+	background-image: linear-gradient(to right, #151719 , #e69138ff);
+}
+
+
+#sidebar .links{
+	margin-top:50%;
+}
+
+#sidebar .footer{
+	position:absolute;
+	bottom:20px;
+	width:100%;
+}
+
+#sidebar .copyright{
+	color:rgba(100,100,100,0.7);
+}
+#sidebar .footer img{
+	width:30px;
+	height:30px;
+	margin-left:10px;
+	margin-right:10px;
+	transition:all 100ms linear;
+}
+#sidebar .footer img:hover{
+	width:34px;
+	height:34px;
+}
+
+#sidebar .footer span:not(:first-child){
+  border-left:1px solid rgba(100,100,100,0.3);
+}
+.panel{
+	border-style: solid;
+  border-width: 1px;
+  border-color: #d8d8d8;
+}
+
+.headtext{
+    text:bold;
+}
+
+#main-page-box{
+	width:100%;
+	padding:10px;
+	margin-top:200px;
+	margin-bottom:100px;
+}
+
+#main-page-box .familly-crest, .familly-description, .familly-nav{
+	width:100%;
+	text-align:center;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#main-page-box .familly-description h1{
+	font-family: 'Ubuntu', sans-serif;
+	
+}
+
+#main-page-box .familly-description, .familly-nav p{
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size:18;
+}
+
+#main-page-box .familly-description{
+	width: 40em
+}
+
+#main-page-box .familly-nav{
+	display:inline;
+	margin:0px;
+}
+#main-page-box .familly-nav p{
+	display:inline;
+	margin:0px;
+	width:60px;
+	
+}
+
+#main-page-box  .icon{
+	display:inline;
+	margin:0px;
+	width:35px;
+	height:35px;
+	margin-right:10px;
+	margin-left:10px;
+}
+
+#main-page-box  .crest{
+	
+}
+
+#footer{
+	position: -webkit-sticky;
+	position: sticky;
+	width:100%;
+	height:40px;
+	background:#151719;
+	bottom: 0;
+}
