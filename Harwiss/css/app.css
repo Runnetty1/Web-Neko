@@ -189,7 +189,6 @@
 
 #main-page-box .familly-description h1{
 	font-family: 'Ubuntu', sans-serif;
-	
 }
 
 #main-page-box .familly-description, .familly-nav p{
@@ -208,8 +207,7 @@
 #main-page-box .familly-nav p{
 	display:inline;
 	margin:0px;
-	width:60px;
-	
+	width:60px;	
 }
 
 #main-page-box  .icon{
@@ -231,5 +229,5 @@
 	width:100%;
 	height:40px;
 	background:#151719;
-	bottom: 0;
+	bottom: 0px;
 }
