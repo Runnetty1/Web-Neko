@@ -11,8 +11,8 @@ Includes:
       * Administrator
       * Moderator
       * User
-  * **Permission changer**
-   * Admin or higher access only
+* **Permission changer**
+  * Admin or higher access only
 * **Invite Only Access**
   * Send invite codes to members via Email (Mod or higher access only)
 * **CV and Portfolio**
