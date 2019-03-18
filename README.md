@@ -5,7 +5,7 @@ Web-Neko is a website package aiming to act as a Portfolio and CV homepage for a
 Includes:
 ============
 
-* **Permission system
+* **Permission system**
    * **Roles:**
       * Owner
       * Administrator
