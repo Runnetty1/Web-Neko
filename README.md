@@ -6,28 +6,28 @@ Includes:
 ============
 
 * **Permission system
-  * **Roles:**
-   * Owner
-   * Administrator
-   * Moderator
-   * User
+   * **Roles:**
+    * Owner
+    * Administrator
+    * Moderator
+    * User
   * **Permission changer**
    * Admin or higher access only
 * **Invite Only Access**
- * Send invite codes to members via Email (Mod or higher access only)
+  * Send invite codes to members via Email (Mod or higher access only)
 * **CV and Portfolio**
- * Contains all the needed data for CV and portfolio visualisation
- * Can only be edited by the owner of the account
+   * Contains all the needed data for CV and portfolio visualisation
+   * Can only be edited by the owner of the account
 * **Editor**
- * CV Editor
- * Portfolio Editor
+   * CV Editor
+   * Portfolio Editor
 * **Account Settings**
 * **Email Login**
 * **Newsfeed**
- * Users can post updates regarding the familly or other.
- * Users can comment and like thiese post.
+  * Users can post updates regarding the familly or other.
+  * Users can comment and like thiese post.
 * **Arrangement planer**
- * Allows users to invite other users to arrangements.
+  * Allows users to invite other users to arrangements.
  
  
 More systems might follow later as needed.
