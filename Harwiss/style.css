@@ -47,3 +47,72 @@
 #sidebar .footer span:not(:first-child){
   border-left:1px solid rgba(100,100,100,0.3);
 }
+
+.panel{
+	border:1px solid rgba(100,100,100,0.3);
+}
+#main-page-box{
+	width:100%;
+	padding:10px;
+	margin-top:200px;
+	margin-bottom:100px;
+}
+
+#main-page-box .familly-crest, .familly-description, .familly-nav{
+	width:100%;
+	text-align:center;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#main-page-box .familly-description h1{
+	font-family: 'Ubuntu', sans-serif;
+	
+}
+
+#main-page-box .familly-description, .familly-nav p{
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size:18;
+}
+
+#main-page-box .familly-description{
+	width: 40em
+}
+
+#main-page-box .familly-nav{
+	display:inline;
+	margin:0px;
+}
+#main-page-box .familly-nav p{
+	display:inline;
+	margin:0px;
+	width:60px;
+	
+}
+
+#main-page-box  .icon{
+	display:inline;
+	margin:0px;
+	width:35px;
+	height:35px;
+	margin-right:10px;
+	margin-left:10px;
+}
+
+#main-page-box  .crest{
+	
+}
+
+  body{
+     background-color: #000000;
+   padding: 0px;
+   margin: 0px;
+ }
+
+#gradient
+{
+  width: 100%;
+  height: 800px;
+  padding: 0px;
+  margin: 0px;
+}

@@ -11,6 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/js/foundation.min.js" integrity="sha256-/PFxCnsMh+nTuM0k3VJCRch1gwnCfKjaP8rJNq5SoBg= sha384-9ksAFjQjZnpqt6VtpjMjlp2S0qrGbcwF/rvrLUg2vciMhwc1UJJeAAOLuJ96w+Nj sha512-UMSn6RHqqJeJcIfV1eS2tPKCjzaHkU/KqgAnQ7Nzn0mLicFxaVhm9vq7zG5+0LALt15j1ljlg8Fp9PT1VGNmDw==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/foundation.css" />
 	<link rel="stylesheet" href="style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed" rel="stylesheet"
   </head>
   <body>
  <!--   
@@ -40,7 +41,24 @@
 	</div>
 </div>
 -->
+
 <div id="main-page-box" class="row">
+	<div class="familly-crest">
+		<img class="crest" src="img/Nor.png" alt="Nor">	
+	</div>
+	<div class="familly-description">
+		<h1>Harwiss</h1>
+		<p>Our family's webpage, that  shows each family member’s resume and portfolio in a pretty and responsive package. The resume can then be displayed for potential workplaces</p>
+	</div>
+	<div class="familly-nav">
+		<a>
+			<img class="icon" src="img/family-tree-b.png" alt="Nor">	
+		</a>
+		<p class="text ">See tree OR search</p>
+		<a>
+			<img class="icon" src="img/search-ico-b.png" alt="Nor">	
+		</a>
+	</div>
 </div>
 
 
