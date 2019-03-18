@@ -7,10 +7,10 @@ Includes:
 
 * **Permission system
    * **Roles:**
-    * Owner
-    * Administrator
-    * Moderator
-    * User
+      * Owner
+      * Administrator
+      * Moderator
+      * User
   * **Permission changer**
    * Admin or higher access only
 * **Invite Only Access**
