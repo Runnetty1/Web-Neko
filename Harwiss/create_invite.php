@@ -9,7 +9,7 @@ $require_login=false;
 include_once "login_checker.php";
 
 include_once "system/layouts/layout_head.php";
-include_once "system/layouts/layout_register.php";
+include_once "system/layouts/layout_create_invite.php";
 include_once "system/layouts/layout_foot.php";
  
 ?>
