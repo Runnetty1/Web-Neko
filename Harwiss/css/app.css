@@ -187,17 +187,17 @@
     margin-right: auto;
 }
 
-#main-page-box .familly-description h1{
+h1{
 	font-family: 'Ubuntu', sans-serif;
 }
 
-#main-page-box .familly-description, .familly-nav p{
+p{
 	font-family: 'Ubuntu Condensed', sans-serif;
 	font-size:18;
 }
 
 #main-page-box .familly-description{
-	width: 40em
+	width: 40em;
 }
 
 #main-page-box .familly-nav{
@@ -231,3 +231,65 @@
 	background:#151719;
 	bottom: 0px;
 }
+
+/*CREATE INVITE*/
+
+#widget {}
+
+#widget button, code ,form,input{
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#widget h1{
+	text-align: left;
+}
+
+#widget form{
+	margin-left: 10px;
+    margin-right: auto;
+	width: 40em;
+}
+
+#widget .headtext{
+	margin-left: auto;
+    margin-right: auto;
+	width: 40em;
+}
+
+/* Code */
+
+#widget code {
+    background-color: #151719;
+    color: #e69138ff;
+    height: 60px;
+    width: 21em;
+	
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    border-left: 15px solid #e69138ff;
+	border-right: 15px solid #e69138ff;
+}
+
+/* Button */
+
+#widget .submit{
+    background-color: #e69138ff;
+	text-align: center;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 7px 13px;
+	width: 20em;
+    font-size: 20px;
+    cursor:pointer;
+	margin-left: auto;
+    margin-right: auto;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+#widget .submit:hover{background-color: rgba(100,100,100,0.2);}
+#widget .submit:hover{background-color: #151719;}

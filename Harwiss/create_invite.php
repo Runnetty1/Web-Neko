@@ -5,7 +5,7 @@ include_once "system/config/config.php";
 $page_title = "Home";
  
 // include login checker
-$require_login=false;
+$require_login=true;
 include_once "login_checker.php";
 
 include_once "system/layouts/layout_head.php";
