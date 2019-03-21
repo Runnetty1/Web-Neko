@@ -79,12 +79,52 @@ function check_serial($userial){
 		//no serial
 		echo "no serial, checking validity<br>";
 		//Make sure serial is valid
-		$vserial=false;
+		
+		$subChars1 = 'ACDFGHIJLMPQRSTUVXYZ';
+		$subChars2 = '124569BCDEFGHIJKLNOPQRUVWXYZbcdefghijklmnopqruvwxyz';
+		$subChars3 = '1234567890BCDEFGJKLMNOPQTUVXYZbcdefgjklmnopqtuv';
+		
+		$str_arr = explode ("-", $userial);
+		echo $str_arr[0]."<br>";
+		echo $str_arr[1]."<br>";
+		echo $str_arr[2]."<br>";
+		print_r($str_arr); 
+		/*function generateSerial() {
+			let subChars1 = 'ACDFGHIJLMPQRSTUVXYZ';
+			let subChars2 = '124569BCDEFGHIJKLNOPQRUVWXYZbcdefghijklmnopqruvwxyz';
+			let subChars3 = '1234567890BCDEFGJKLMNOPQTUVXYZbcdefgjklmnopqtuv';
+			
+			randomSerial = genSubString(subChars1)+"-"+genSubString(subChars2)+"-"+genSubString(subChars3);
+			
+			
+		  document.getElementById('serial').value = randomSerial;
+		  document.getElementById('serialh').value = randomSerial;
+			
+		}
+
+		function genSubString(chars){
+			let subString ="";
+			let randomNumber;
+			for (let i = 0; i < 5; i++) {
+				
+				randomNumber = Math.floor(Math.random() * chars.length);
+				
+				subString += chars.substring(randomNumber, randomNumber + 1);
+			}
+			return subString;
+		}
+		*/
+		
+		$vserial=true;
 	}else{
 		//Head back with error cookie, serial exist
 		echo "email exist, heading back";
 		//header("Location: $home_url/create_invite");
 	}
+}
+
+function checkSubString($sub,$chars){
+	
 }
 
 //Do Register (make sure input is sanitized)
