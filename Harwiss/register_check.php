@@ -62,7 +62,8 @@ class LoginData {
 
 try {
      // first connect to database
-     $db = new \PDO("mysql:host=$host;port=$port;dbname=$db_name;charset=utf8", "$username", "", [
+	 $dbh = new Database();
+     $db = new \PDO($dbh->getdb(), $dbh->username, $dbh->password [
        PDO::ATTR_EMULATE_PREPARES => false, 
        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
      ]); 

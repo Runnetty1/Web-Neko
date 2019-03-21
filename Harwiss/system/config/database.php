@@ -7,6 +7,10 @@ class database{
 	public $password = ""; 
 	public $db_name = "harwissdata";
 	
+	function getDb(){
+		return  "mysql:host=$this->host;port=$this->port;dbname=$this->db_name;charset=utf8";
+	}
+	
 }
 	
 	

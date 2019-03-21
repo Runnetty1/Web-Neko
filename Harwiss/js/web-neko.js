@@ -5,7 +5,7 @@ function toggleSidebar(){
 function toggleAccountPanel(){
 	document.getElementById("account-panel").classList.toggle("active");
 }
-
+//Make sure this is not visible for randoms!!
 function generateSerial() {
 
     let subChars1 = 'ACDFGHIJLMPQRSTUVXYZ';
