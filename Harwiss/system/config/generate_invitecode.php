@@ -16,24 +16,29 @@ $headers = "From: mats1992@gmail.com";
 echo "sending email to: ".$email . "<br>";
 echo "their invite code: ".$serial . "<br>";
 
-
+$vemail = false;
+$vserial = false;
 
 if($_POST && isset($_POST['email'])&& isset($_POST['serial']))
 { 
 
-//sanitize email, and serial
-//check that serial does not exist
-//check that email does not exist.
-//Make sure Serial consists of 3*5letters bound by a '-' and 
-//does not contain any letters that has been banned by each part
-check_email($email);
-check_serial($serial);
-register_invitedata($email,$serial);
+	//sanitize email, and serial
+	//check that serial does not exist
+	//check that email does not exist.
+	//Make sure Serial consists of 3*5letters bound by a '-' and 
+	//does not contain any letters that has been banned by each part
+	check_email($email);
+	check_serial($serial);
+	if($vemail && $vserial){
+		register_invitedata($email,$serial);
+	}else{
+		header("Location: $home_url/create_invite?action=invalid_data");
+	}
 
 }else{
 	//no data! STOP EVERYTHING AND HIT THE FLOOR
 	//set error cookies
-	//header("Location: $home_url/create_invite");
+	header("Location: $home_url/create_invite?action=invalid_data");
 }
 
 
@@ -54,10 +59,11 @@ function check_email($uemail){
 		//No Email
 		//Make sure email is valid:
 		echo "no email, checking validity<br>";
+		$vemail=true;
 	}else{
 		//Head back with error cookie, email exist
 		echo "email exist, heading back";
-		header("Location: $home_url/create_invite");
+		
 	}
 }
 
@@ -73,6 +79,7 @@ function check_serial($userial){
 		//no serial
 		echo "no serial, checking validity<br>";
 		//Make sure serial is valid
+		$vserial=false;
 	}else{
 		//Head back with error cookie, serial exist
 		echo "email exist, heading back";
@@ -108,6 +115,7 @@ $sql_insert3 = "UPDATE `invitecodes` SET `ownerid` = :id WHERE `invitecode` = :s
 	$count->bindParam(":id",$query["id"]);
 	$count->bindParam(":serial",$userial);
 	$count->execute(); 
+	echo "Sucess!";
 }
 
 //mail($to,$subject,$txt,$headers);

@@ -49,7 +49,7 @@ try {
 	 $dbh = new Database();
   
      // first connect to database with the PDO object. 
-     $db = new \PDO($dbh->getdb(), $dbh->username, $dbh->password [
+     $db = new \PDO($dbh->getdb(), $dbh->username, $dbh->password, [
        PDO::ATTR_EMULATE_PREPARES => false, 
        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
      ]); 
