@@ -2,10 +2,11 @@
 
 include_once "config.php";
 include_once "database.php";
-// Define mail
+
 $email = $_POST['email'];
 $serial = $_POST['serial'];
 
+// Define mail
 $to = "mats1992@gmail.com";
 $subject = "Invite to Web-Neko";
 $txt = "Hello
@@ -13,11 +14,8 @@ $txt = "Hello
 	Bellow is your Invite Code and link to register page";
 $headers = "From: mats1992@gmail.com";
 
-echo "sending email to: ".$email . "<br>";
-echo "their invite code: ".$serial . "<br>";
-
-$vemail = false;
-$vserial = false;
+$vemail = ".";
+$vserial = ".";
 
 if($_POST && isset($_POST['email'])&& isset($_POST['serial']))
 { 
@@ -32,13 +30,15 @@ if($_POST && isset($_POST['email'])&& isset($_POST['serial']))
 	if($vemail && $vserial){
 		register_invitedata($email,$serial);
 	}else{
-		header("Location: $home_url/create_invite?action=invalid_data");
+		echo "Error:<br>Serial Validation: $vserial, Email Validation: $vemail ";
+	//header("Location: $home_url/create_invite?action=invalid_data");
 	}
 
 }else{
 	//no data! STOP EVERYTHING AND HIT THE FLOOR
 	//set error cookies
-	header("Location: $home_url/create_invite?action=invalid_data");
+	echo "Error:<br>Serial POST: ".isset($_POST['serial']).", Email Post not set:". isset($_POST['email'])."<br> ";
+	//header("Location: $home_url/create_invite?action=invalid_data");
 }
 
 
@@ -80,15 +80,23 @@ function check_serial($userial){
 		echo "no serial, checking validity<br>";
 		//Make sure serial is valid
 		
-		$subChars1 = 'ACDFGHIJLMPQRSTUVXYZ';
-		$subChars2 = '124569BCDEFGHIJKLNOPQRUVWXYZbcdefghijklmnopqruvwxyz';
-		$subChars3 = '1234567890BCDEFGJKLMNOPQTUVXYZbcdefgjklmnopqtuv';
+		$subChars1 = array('ACDFGHIJLMPQRSTUVXYZ','124569BCDEFGHIJKLNOPQRUVWXYZbcdefghijklmnopqruvwxyz','1234567890BCDEFGJKLMNOPQTUVXYZbcdefgjklmnopqtuv');
 		
 		$str_arr = explode ("-", $userial);
 		echo $str_arr[0]."<br>";
 		echo $str_arr[1]."<br>";
 		echo $str_arr[2]."<br>";
-		print_r($str_arr); 
+		
+		for($i = 0; i<3 $i++){
+			if(checkSubString($str_arr[$i],$subChars1[$i])){
+				$vserial=true;
+			}else{
+				$vserial=false;
+				break;
+			}
+		}
+		
+		//print_r($str_arr); 
 		/*function generateSerial() {
 			let subChars1 = 'ACDFGHIJLMPQRSTUVXYZ';
 			let subChars2 = '124569BCDEFGHIJKLNOPQRUVWXYZbcdefghijklmnopqruvwxyz';
@@ -115,7 +123,7 @@ function check_serial($userial){
 		}
 		*/
 		
-		$vserial=true;
+		//$vserial=true;
 	}else{
 		//Head back with error cookie, serial exist
 		echo "email exist, heading back";
@@ -123,8 +131,14 @@ function check_serial($userial){
 	}
 }
 
-function checkSubString($sub,$chars){
-	
+function checkSubString($string,$acceptedChars){
+	foreach (str_split($string) as $char) {
+        if (in_array($char, $acceptedChars)) {
+            echo "Char: ".$char." -> OK";
+        } else {
+            echo "Char: ".$char." -> KO";
+        }   
+	}
 }
 
 //Do Register (make sure input is sanitized)
@@ -148,7 +162,6 @@ $query = $dbh->prepare('SELECT id FROM accountdata WHERE email = :email LIMIT 1;
 	$query->execute([':email' => $uemail]); 
 	$query = $query->fetch();
 	$id = $query["id"];
-	echo "userid:".$query["id"];
 	
 $sql_insert3 = "UPDATE `invitecodes` SET `ownerid` = :id WHERE `invitecode` = :serial";
 	$count = $dbh->prepare($sql_insert3);
