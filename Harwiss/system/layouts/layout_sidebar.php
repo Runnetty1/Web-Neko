@@ -1,5 +1,9 @@
     <!--SideBar -->
 	<div id="sidebar">
+		<div class="profile-img">
+			<img src="users/mats/img/profile.png" alt="profile image">
+		</div>
+	
 		<div class="links">
 			<ul>
 				<li>Main</li>

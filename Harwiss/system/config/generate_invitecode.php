@@ -96,34 +96,6 @@ function check_serial($userial){
 			}
 		}
 		
-		//print_r($str_arr); 
-		/*function generateSerial() {
-			let subChars1 = 'ACDFGHIJLMPQRSTUVXYZ';
-			let subChars2 = '124569BCDEFGHIJKLNOPQRUVWXYZbcdefghijklmnopqruvwxyz';
-			let subChars3 = '1234567890BCDEFGJKLMNOPQTUVXYZbcdefgjklmnopqtuv';
-			
-			randomSerial = genSubString(subChars1)+"-"+genSubString(subChars2)+"-"+genSubString(subChars3);
-			
-			
-		  document.getElementById('serial').value = randomSerial;
-		  document.getElementById('serialh').value = randomSerial;
-			
-		}
-
-		function genSubString(chars){
-			let subString ="";
-			let randomNumber;
-			for (let i = 0; i < 5; i++) {
-				
-				randomNumber = Math.floor(Math.random() * chars.length);
-				
-				subString += chars.substring(randomNumber, randomNumber + 1);
-			}
-			return subString;
-		}
-		*/
-		
-		//$vserial=true;
 	}else{
 		//Head back with error cookie, serial exist
 		echo "email exist, heading back";
