@@ -60,15 +60,7 @@
 			<p class="school">Hellerud Videregående</p>
 			<p class="subject">Studiespesialisering</p>
 		</div>
-		<div class="school-row">
-			<p class="year">2009 - 2011</p>
-			<p class="school">Hellerud Videregående</p>
-			<p class="subject">Studiespesialisering</p>
-		</div><div class="school-row">
-			<p class="year">2009 - 2011</p>
-			<p class="school">Hellerud Videregående</p>
-			<p class="subject">Studiespesialisering</p>
-		</div>
+		
 		
 	</div>
 	
