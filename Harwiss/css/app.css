@@ -5,6 +5,7 @@
 	height:40px;
 	top: 0;
 	background:#151719;
+	z-index: 2;
 }
  
 #topbar .toggle-btn{
@@ -89,10 +90,10 @@
 	z-index: -1;
 	opacity: 0;
 	//position:absolute;
-	right:10px;
+	right:0px;
 	display:inline-block;
 	top:0px;
-	width:120px;
+	width:123px;
 	position:fixed;
 	background:#151719;
 	border-right: 10px solid #e69138ff;
@@ -124,6 +125,7 @@
 	transition:all 500ms linear;
 	border-right: 10px solid #e69138ff;
 	transition:all 300ms linear;
+	z-index: 2;
 }
 #sidebar.active{
 	left:0px;
@@ -315,7 +317,7 @@ p{
 	bottom: 0px;
 	padding-bottom:0px;
 	margin-bottom:0px;
-	z-index: -1;
+	//z-index: -1;
 }
 /*Main User page*/
 
@@ -391,89 +393,130 @@ p{
 	
 }
 
-#profile-education {
-	background-color: rgba(100,100,100,0.1);
-	 height: 20em;
-	 padding:10px;
-	 
+
+/*profile parts*/
+#profile-data {
+	 width:100%;
+	 //background-color:blue;
+	 display:inline;
 }
-#profile-education .content:after {		
+
+#about-data {
+	 width:50%;
+	 //background-color:blue;
+	 //visibility:hidden;
+}
+#education-data {
+	 width:100%;
+	 //visibility:hidden;
+	 //background-color:blue;
+}
+#work-data {
+	 width:100%;
+	 //background-color:blue;
+	 //visibility:hidden;
+}
+
+#about-data.active {
+	visibility:hidden;
+}
+#education-data.active {
+visibility:visible;
+}
+#work-data.active {
+	 visibility:visible;
+}
+
+#about-data.disabled {
+	visibility:hidden;
+}
+#education-data.disabled {
+	visibility:hidden;
+}
+#work-data.disabled {
+	 visibility:hidden;
+}
+
+.profile-data-box {
+	 padding:10px; 
+}
+
+.profile-data-box .content:after {		
 	content: "";
 	display: inline;
 	clear: both;
 }
-#profile-education .content {		
-	//border:1px solid rgba(100,100,100,0.3);
-	height: 100%;
-	width:100%;
-	//padding-top:10px;
+.profile-data-box .content {		
+	width:100%;	
 }
 
-#profile-education .year{	
+.profile-data-box .year{	
+	display:inline;
+	float: left;
+	width: 13.33%; 	
+	padding-left:10px;
+	padding-top:10px;
+}
+
+.profile-data-box .school{	
+	display:inline;
+	float: left;
+	width: 33.3%; 
+	padding-left:10px;
+	padding-top:10px;
+}
+.profile-data-box .school-row{	
+	display:inline;
+	float: left;
+	width: 100%; 
+	border-bottom:1px solid rgba(100,100,100,0.3);
+	background-color: rgba(100,100,100,0.1);
+}
+
+.profile-data-box .title p{	
+	padding-left:8px;
+	padding-top:0px;		
+}
+.profile-data-box .subject{	
+	display:inline;
+	float: left;
+	width: 23.33%; 	
+	padding-left:10px;
+	padding-top:10px;
+}
+
+.profile-data-box .title {	
+	display:inline;
+	float: left;
+	width: 33.33%;	
+}
+
+.profile-data-box .titles .year{	
 	display:inline;
 	float: left;
 	width: 13.33%; 	
 	padding-left:10px;
 }
 
-#profile-education .school{	
+.profile-data-box .titles .school{	
 	display:inline;
 	float: left;
 	width: 33.3%; 
 	padding-left:10px;
 }
-#profile-education .school-row{	
-	display:inline;
-	float: left;
-	width: 100%; 
-	border-bottom:1px solid rgba(100,100,100,0.3);
-}
-
-#profile-education .title p{	
-		padding-left:8px;
-		padding-top:0px;
-		//border-bottom:1px solid rgba(100,100,100,0.3);
-		//border-left:1px solid rgba(100,100,100,0.3);
-		
-}
-#profile-education .subject{	
+.profile-data-box .titles .subject{	
 	display:inline;
 	float: left;
 	width: 23.33%; 	
 	padding-left:10px;
 }
-
-#profile-education .title {	
-	display:inline;
-	float: left;
-	width: 33.33%;
-	
-}
-#profile-education .titles .year{	
-	display:inline;
-	float: left;
-	width: 13.33%; 	
-	padding-left:10px;
-}
-
-#profile-education .titles .school{	
-	display:inline;
-	float: left;
-	width: 33.3%; 
-	padding-left:10px;
-}
-#profile-education .titles .subject{	
-	display:inline;
-	float: left;
-	width: 23.33%; 	
-	padding-left:10px;
-}
-#profile-education .titles {		
+.profile-data-box .titles {		
 	display:inline;
 	float: left;
 	width: 100%; 
+	padding-top:10px;
 	border-bottom:1px solid rgba(100,100,100,0.3);
-  background-color: rgba(100,100,100,0.1);
+	background-color: rgba(100,100,100,0.2);
 }
 /*CREATE INVITE*/
 
