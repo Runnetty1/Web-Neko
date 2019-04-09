@@ -88,6 +88,12 @@ if($_POST && isset($_POST['username'])&& isset($_POST['password']))
 // check that username is not taken.
 // create the new account in db using data
 
+/*
+This hash function is just to easily create a hash for testing.But it is not secure.
+A more complex system should be created and used instead.
+
+Make sure to never upload your acctual hash algorithm publicly.
+*/
 function createHashFromTextAndSalt($t,$s)
 {
 	return hash('sha512', $t . $s);
