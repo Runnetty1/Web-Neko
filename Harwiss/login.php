@@ -70,7 +70,13 @@ if($_POST && isset($_POST['username'])&& isset($_POST['password']))
 
 	header("Location: $home_url");
 }
+/*
+This hash function is just to easily create a hash for testing. But it is not secure.
+A more complex system should be created and used instead.
+Make sure to never upload your acctual hash algorithm publicly.
 
+It should also be merged into a help class eventualy.
+*/
 function createHashFromTextAndSalt($t,$s)
 {
 	return hash('sha512', $t . $s);
