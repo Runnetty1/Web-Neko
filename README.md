@@ -33,14 +33,3 @@ Will Eventualy Include:
  
  
 More systems might follow later as needed.
-
-**My Steam Profile** *(from [SteamDB](https://steamdb.info/calculator/76561198001850457/?cc=no))*
-
-
-* **Worth:** 24328 kr (7356 kr with sales)
-
-* **Games owned:** 229
-
-* **Games played:** 158 *(68%)*
-
-* **Hours on record:** 8,253.4h
