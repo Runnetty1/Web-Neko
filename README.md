@@ -1,6 +1,10 @@
 # Web-Neko
 ============
 
+>**Please Note:** 
+This a Work in progress. The repo does not contain any backend logic, connecting the systems.
+Its mostly currently a visual experience, as it contains just temporary page layouts and designs. 
+
 Web-Neko is a website package aiming to act as a Portfolio and CV homepage for a entire family.
 As well as Editor tools each user can use to add/edit and delete data on their portfolio/CV pages.
 
